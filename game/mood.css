@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #cfd9df, #e2ebf0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.moodBtn {
+  display: inline-block;
+  padding: 20px 40px;
+  margin: 15px;
+  font-size: 1.5em;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.moodBtn:hover { transform: scale(1.1); }
+
+.moodBtn.bad { background-color: #7e7e7e; }
+.moodBtn.neutral { background-color: #87cefa; }
+.moodBtn.good { background-color: #f8b500; }

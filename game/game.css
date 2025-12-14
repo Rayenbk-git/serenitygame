@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("assets/cloudysky.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+/* SCORE */
+#score {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+/* BASKET */
+#basket {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  width: 160px;
+  transform: translateX(-50%);
+  z-index: 1000;
+  cursor: grab;
+  background: rgba(255,255,255,0.15); /* debug visible */
+}
+
+/* FEUILLES */
+.leaf {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  background-size: cover;        /* change contain → cover pour remplir la div */
+  background-position: center;   /* centre l'image dans la div */
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;           /* centre vertical */
+  justify-content: center;       /* centre horizontal */
+
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+
+  user-select: none;
+  pointer-events: none;
+}
+#chatOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#chatBox {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#chatMessages {
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#chatInput {
+  padding: 5px;
+  font-size: 14px;
+}
+
+#chatSend {
+  margin-top: 5px;
+  padding: 5px 10px;
+}
+
